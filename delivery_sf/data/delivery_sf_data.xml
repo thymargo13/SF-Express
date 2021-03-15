@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+    <record id="product_product_delivery_sf" model="product.product">
+      <field name="name">SF Express</field>
+      <field name="default_code">Delivery_014</field>
+      <field name="type">service</field>
+      <field name="categ_id" ref="delivery.product_category_deliveries"/>
+      <field name="sale_ok" eval="False"/>
+      <field name="purchase_ok" eval="False"/>
+      <field name="list_price">0.0</field>
+      <field name="invoice_policy">order</field>
+    </record>
+
+    <record id="delivery_carrier_sf" model="delivery.carrier">
+        <field name="name">SF Express</field>
+        <field name="product_id" ref="delivery_sf.product_product_delivery_sf"/>
+        <field name="delivery_type">sf</field>
+        <field name="sf_client_code">YSBWk1</field>
+        <field name="sf_monthlyCard">7551234567</field>
+        <field name="sf_check_word">IVrx7iJR4nMEtdbDOk7ciA51vG1gL0jC</field>
+        <field name="sf_language">C</field>
+        <field name="sf_pay_monthly">True</field>
+        <field name="sf_fixed_price">True</field>
+    </record>
+</data>
+</odoo>
